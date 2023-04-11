@@ -42,7 +42,7 @@ function UserDetials(userID){
         .then((result) =>{
             tablew.innerHTML+=`<tr>
             <td>${result.fname +" "+ result.lname}</td>
-            <td><button onclick="getMarks('${id}')">ViewRes</button></td> 
+            <td><button onclick="getMarks('${id}','${result.fname +" "+ result.lname}')">ViewRes</button></td> 
             </tr>`
             
             
@@ -52,13 +52,27 @@ function UserDetials(userID){
     
    
 }
-const getMarks=(id)=>{
-    console.clear();
+const getMarks=(id,name)=>{
+    let tbl=$('#dataShow');
+    tbl.html('');
+    $('#Name').html('Name : '+name);
+    // console.clear();
     fetch(`https://apitutorial.dev.radixweb.net/api/exam-api/getSingleUserResult/${id}`, requestOptions)
         .then((response) => response.json())
         .then((result) => {
             for (const d of result) {
-                console.log("courseName:",d.subCourceId.name, ", Marks:",d.internalExam, )
+                let marks=''
+                $.each(d.internalExam.practical,(i,h)=>{
+                    marks+=h.marks+',';
+                })
+                
+                tbl.append(`<tr>
+                <td>${d.subCourceId.name}</td>
+                <td>${marks}
+                 </td>
+                </tr>`)               
+                // console.log("courseName:",d.subCourceId.name, ", Marks:",d.internalExam.practical);
+                
             }
         })
 }
