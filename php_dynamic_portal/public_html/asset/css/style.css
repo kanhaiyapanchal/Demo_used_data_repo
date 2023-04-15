@@ -1,0 +1,145 @@
+.container {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+.sidebardiv::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.tottagel-button{
+    cursor: pointer;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 7px 0px #8080806b;
+    padding: 3px;
+    width: 63px;
+    background: #1fbb6d00;
+}
+.img-user{
+    border: 2px solid;
+    padding: 3px;
+    width: 50px;
+    height: 50px;
+}
+header{
+  z-index: 10 !important;
+    box-shadow: -3px -2px 7px 0px grey;
+}
+
+
+/* SIDE BAR  */
+.bubble-top {
+  
+  color: white;
+
+  --size: 100px;
+  background: #333;
+  border-radius: 7px;
+  position: relative;
+  top: 92px;
+    
+ 
+}
+.active{
+  color: orange !important;
+}
+.active-link{
+  color: rgb(187, 255, 0) !important;
+}
+
+
+.sidebardiv{
+  padding: 10px;
+  height: 50rem;
+  overflow-y: scroll;
+  
+}
+
+li{
+  margin-bottom:2rem;
+
+}
+  
+  .bubble-top:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 9%;
+    width: 0;
+    height: 0;
+    border: calc(var(--size) * 0.13) solid transparent;
+    border-bottom-color: #333;
+    border-top: 0;
+    margin-left: calc(var(--size) * 0.13 * -1);
+    margin-top: calc(var(--size) * 0.13 * -1);
+    
+  }
+ .multi-collapse{
+    background-color: black !important;
+    padding: 9px;
+    border-radius: 5px;
+  }
+
+  .tech-button{
+    color: skyblue;
+    font-size: 22px;
+    font-weight: bolder;
+    border: 0;
+  }
+  .tech-button:hover{
+    color: burlywood;
+
+  }
+  svg{
+    fill: coral;
+    height: 30px;
+  }
+  .btn:focus,.btn:active {  
+    outline: none !important;
+    box-shadow: none;
+ }
+ .sourse-link{
+    padding: 30px;
+    font-weight: bold;
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+ }
+ .asgment-link{
+  padding: 18px;
+  font-weight: bold;
+  color: white;
+  font-size: medium;
+  text-decoration: none;
+ }
+ .sourse-link:hover{
+    color: goldenrod;
+ }
+ .asgment-link:hover{
+  color: rgb(18, 192, 255);
+}
+
+.ul-assginmnet{
+  background: #637274 !important;
+    padding: 1rem !important;
+    border-radius: 3px !important;
+}
+
+ .radix-logo{
+  width: 100%;
+  height: 100%;
+ }
+
+ /* Main box  */
+ .main-container{
+  height: 60rem;
+  overflow-y: scroll;
+ }
+
+
+
+
+
